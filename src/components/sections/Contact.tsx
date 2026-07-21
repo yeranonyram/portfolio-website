@@ -195,7 +195,7 @@ export const Contact = () => {
               disabled={sending}
               className="w-full bg-primary text-background font-bold py-3 rounded-lg hover:scale-105 transition disabled:opacity-50"
             >
-              {sending ? "Enviando..." : "Enviar 🚀"}
+              {sending ? "Enviando..." : "Enviar"}
             </button>
 
 

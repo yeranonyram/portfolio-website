@@ -45,14 +45,13 @@ export const Hero = () => {
             </motion.h2>
 
 
-            {/* DESCRIPCIÓN PRINCIPAL ACTUALIZADA */}
+            {/* DESCRIPCIÓN PRINCIPAL */}
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.7 }}
               className="mt-5 text-xl md:text-2xl text-muted"
             >
-              Ingeniero Informático |{" "}
 
               <span className="text-secondary font-semibold">
                 Backend Engineer
@@ -68,7 +67,7 @@ export const Hero = () => {
 
 
 
-            {/* TEXTO PROFESIONAL ACTUALIZADO */}
+            {/* TEXTO PROFESIONAL */}
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -77,8 +76,8 @@ export const Hero = () => {
             >
               Desarrollo APIs escalables, arquitecturas backend y sistemas
               empresariales utilizando Node.js, NestJS, PostgreSQL, Docker
-              y tecnologías cloud. Apasionado por construir soluciones
-              limpias, mantenibles y orientadas a resultados.
+              y tecnologías cloud. Enfocado en crear software limpio,
+              mantenible y eficiente aplicando buenas prácticas de desarrollo.
             </motion.p>
 
 
@@ -90,7 +89,6 @@ export const Hero = () => {
               transition={{ delay: 1 }}
               className="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
             >
-
 
               <a
                 href="#proyectos"
@@ -185,7 +183,8 @@ export const Hero = () => {
             />
 
 
-            {/* ESPECIALIDAD */}
+
+            {/* INFORMACIÓN PROFESIONAL */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

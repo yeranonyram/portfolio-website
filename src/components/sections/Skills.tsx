@@ -20,14 +20,15 @@ import {
   SiGit,
   SiSwagger,
   SiSequelize,
-  SiRender,
-  SiGithub,
+  SiBootstrap
 } from "react-icons/si";
 
 import {
   FaLaravel,
   FaPython,
+  FaServer,
   FaDatabase,
+  FaListCheck,
 } from "react-icons/fa6";
 
 
@@ -74,6 +75,7 @@ const skills = [
       { name: "TypeScript", icon: <SiTypescript /> },
       { name: "JavaScript", icon: <SiJavascript /> },
       { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+      { name: "Bootstrap", icon: <SiBootstrap /> },
       { name: "Vite", icon: <SiVite /> },
     ],
   },
@@ -84,13 +86,26 @@ const skills = [
     items: [
       { name: "Docker", icon: <SiDocker /> },
       { name: "GitHub Actions", icon: <SiGithubactions /> },
-      { name: "CI/CD", icon: <SiGithub /> },
-      { name: "Render", icon: <SiRender /> },
+      { name: "CI/CD", icon: <SiGithubactions /> },
+      { name: "Render", icon: <FaServer /> },
       { name: "Git", icon: <SiGit /> },
     ],
   },
 
+
+  {
+    category: "Metodologías",
+    items: [
+      { name: "Scrum", icon: <FaListCheck /> },
+      { name: "Kanban", icon: <FaListCheck /> },
+      { name: "Git Flow", icon: <SiGit /> },
+      { name: "Gestión de tareas", icon: <FaListCheck /> },
+    ],
+  },
+
 ];
+
+
 
 
 export const Skills = () => {

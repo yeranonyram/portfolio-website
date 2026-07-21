@@ -1,1 +1,45 @@
 @import "tailwindcss";
+
+@theme {
+  /* Colores base oscuros */
+  --color-background: #0b0a0a;
+  --color-surface: #1a1818;
+  --color-primary: #c0392b;   /* rojo sangre */
+  --color-secondary: #f1c40f; /* dorado metal */
+  --color-accent: #e67e22;    /* fuego */
+  --color-text: #ececec;
+  --color-muted: #999999;
+
+  /* Tipografía */
+  --font-metal: "Metal Mania", cursive;
+  --font-sans: "Inter", sans-serif;
+
+  /* Sombras y bordes */
+  --shadow-metal: 0 4px 15px rgba(192, 57, 43, 0.3);
+  --shadow-glow: 0 0 20px rgba(241, 196, 15, 0.2);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  /* Scrollbar personalizada (metalera) */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-background);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 10px;
+  }
+}

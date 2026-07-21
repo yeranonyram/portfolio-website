@@ -1,28 +1,49 @@
 @import "tailwindcss";
-:root{
 
---background:#0D0D0D;
+@theme {
+  /* Colores base oscuros */
+  --color-background: #0b0a0a;
+  --color-surface: #1a1818;
+  --color-primary: #c0392b;   /* rojo sangre */
+  --color-secondary: #f1c40f; /* dorado metal */
+  --color-accent: #e67e22;    /* fuego */
+  --color-text: #ececec;
+  --color-muted: #999999;
 
---surface:#151515;
+  /* Tipografía */
+  --font-metal: "Metal Mania", cursive;
+  --font-sans: "Inter", sans-serif;
 
---card:#1E1E1E;
-
---primary:#C62828;
-
---primary-hover:#B71C1C;
-
---text:#F5F5F5;
-
---text-secondary:#BDBDBD;
-
+  /* Sombras y bordes */
+  --shadow-metal: 0 4px 15px rgba(192, 57, 43, 0.3);
+  --shadow-glow: 0 0 20px rgba(241, 196, 15, 0.2);
 }
 
-body{
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-background:var(--background);
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
 
-color:var(--text);
+  /* Scrollbar personalizada (metalera) */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
 
-font-family:'Inter',sans-serif;
+  ::-webkit-scrollbar-track {
+    background: var(--color-background);
+  }
 
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 10px;
+  }
 }

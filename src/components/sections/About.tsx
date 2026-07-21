@@ -23,21 +23,34 @@ export const About = () => {
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-4 text-muted leading-relaxed"
+            className="space-y-6 text-muted leading-relaxed text-lg"
           >
             <p>
-              Soy un apasionado del código y la creatividad. Me especializo en 
-              construir <span className="text-primary">experiencias web inmersivas</span> 
-              que combinan diseño vanguardista con tecnología sólida.
+              Soy <span className="text-primary font-semibold">Yerko Flores</span>,
+              desarrollador <span className="text-secondary font-semibold">Full Stack</span>
+              especializado en el desarrollo de aplicaciones web modernas,
+              escalables y seguras utilizando tecnologías como
+              <span className="text-primary"> React, TypeScript, NestJS y PostgreSQL</span>.
             </p>
+
             <p>
-              Mi enfoque <span className="text-secondary">"metalero"</span> se refleja en 
-              la intensidad y la potencia de mis soluciones, pero siempre con una 
-              <span className="text-primary"> estructura limpia y profesional</span>.
+              Disfruto diseñar arquitecturas limpias, construir APIs REST,
+              implementar autenticación con JWT, bases de datos relacionales,
+              documentación con Swagger, pruebas con Jest y despliegues
+              automatizados mediante Docker, GitHub Actions y Render.
             </p>
+
             <p>
-              <span className="text-secondary">🌌 Universo:</span> Cada proyecto es un 
-              nuevo sistema solar que exploro con curiosidad y precisión.
+              Mi objetivo es crear software que no solo funcione correctamente,
+              sino que también sea mantenible, eficiente y preparado para crecer
+              en entornos profesionales.
+            </p>
+
+            <p>
+              Además del desarrollo de software, la música forma parte de mi
+              identidad desde hace muchos años. Esa combinación entre creatividad,
+              disciplina y resolución de problemas es la que intento reflejar en
+              cada proyecto que desarrollo.
             </p>
           </motion.div>
 
@@ -47,8 +60,21 @@ export const About = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex justify-center"
           >
-            <div className="w-64 h-64 rounded-full bg-gradient-to-br from-primary/30 to-secondary/30 flex items-center justify-center text-8xl shadow-glow">
-              🎸
+            <div className="w-72 h-72 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 border border-primary/20 p-8 flex flex-col justify-center shadow-glow">
+
+              <h3 className="text-2xl font-bold text-primary mb-6">
+                Perfil Profesional
+              </h3>
+
+              <ul className="space-y-3 text-muted">
+                <li>✔ Full Stack Developer</li>
+                <li>✔ React + TypeScript</li>
+                <li>✔ NestJS + Node.js</li>
+                <li>✔ PostgreSQL · MySQL</li>
+                <li>✔ Docker · GitHub Actions</li>
+                <li>✔ AWS Cloud (En formación)</li>
+              </ul>
+
             </div>
           </motion.div>
         </div>

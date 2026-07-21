@@ -1,20 +1,82 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { 
-  SiReact, SiTypescript, SiTailwindcss, SiNodedotjs, 
-  SiMongodb, SiGit, SiDocker, SiFigma 
+import {
+  SiReact,
+  SiTypescript,
+  SiJavascript,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiVite,
+  SiNodedotjs,
+  SiNestjs,
+  SiExpress,
+  SiPostgresql,
+  SiMysql,
+  SiMongodb,
+  SiDocker,
+  SiGithubactions,
+  SiGit,
+  SiSwagger,
+  SiSequelize,
 } from "react-icons/si";
 
+import {
+  FaLaravel,
+  FaPython,
+  FaAws,
+} from "react-icons/fa6";
+
 const skills = [
-  { name: "React", icon: <SiReact />, level: 90 },
-  { name: "TypeScript", icon: <SiTypescript />, level: 85 },
-  { name: "Tailwind CSS", icon: <SiTailwindcss />, level: 80 },
-  { name: "Node.js", icon: <SiNodedotjs />, level: 75 },
-  { name: "MongoDB", icon: <SiMongodb />, level: 70 },
-  { name: "Git", icon: <SiGit />, level: 85 },
-  { name: "Docker", icon: <SiDocker />, level: 65 },
-  { name: "Figma", icon: <SiFigma />, level: 70 },
+  {
+    category: "Backend",
+    items: [
+      { name: "Node.js", icon: <SiNodedotjs /> },
+      { name: "NestJS", icon: <SiNestjs /> },
+      { name: "Express", icon: <SiExpress /> },
+      { name: "Laravel", icon: <FaLaravel /> },
+      { name: "Django", icon: <FaPython /> },
+      { name: "Swagger / OpenAPI", icon: <SiSwagger /> },
+    ],
+  },
+
+  {
+    category: "Bases de Datos",
+    items: [
+      { name: "PostgreSQL", icon: <SiPostgresql /> },
+      { name: "MySQL", icon: <SiMysql /> },
+      { name: "MongoDB", icon: <SiMongodb /> },
+    ],
+  },
+
+  {
+    category: "ORM / Data Access",
+    items: [
+      { name: "TypeORM", icon: <SiPostgresql /> },
+      { name: "Sequelize", icon: <SiSequelize /> },
+    ],
+  },
+
+  {
+    category: "Frontend",
+    items: [
+      { name: "React", icon: <SiReact /> },
+      { name: "Next.js", icon: <SiNextdotjs /> },
+      { name: "TypeScript", icon: <SiTypescript /> },
+      { name: "JavaScript", icon: <SiJavascript /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+      { name: "Vite", icon: <SiVite /> },
+    ],
+  },
+
+  {
+    category: "DevOps & Cloud",
+    items: [
+      { name: "Docker", icon: <SiDocker /> },
+      { name: "GitHub Actions", icon: <SiGithubactions /> },
+      { name: "AWS Cloud", icon: <FaAws /> },
+      { name: "Git", icon: <SiGit /> },
+    ],
+  },
 ];
 
 export const Skills = () => {
@@ -22,7 +84,11 @@ export const Skills = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="habilidades" ref={ref} className="py-20 bg-background">
+    <section
+      id="habilidades"
+      ref={ref}
+      className="py-20 bg-background"
+    >
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, x: -50 }}
@@ -30,31 +96,58 @@ export const Skills = () => {
           transition={{ duration: 0.6 }}
           className="font-metal text-4xl md:text-5xl text-primary mb-12 text-center"
         >
-          Habilidades
+          Tecnologías
         </motion.h2>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skills.map((skill, i) => (
+        <div className="grid md:grid-cols-2 gap-8">
+          {skills.map((group, index) => (
             <motion.div
-              key={skill.name}
-              initial={{ opacity: 0, y: 20 }}
+              key={group.category}
+              initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="bg-surface/50 p-6 rounded-xl border border-primary/20 hover:border-primary/50 transition-colors group"
+              transition={{
+                duration: 0.5,
+                delay: index * 0.15,
+              }}
+              className="
+                bg-surface/50
+                rounded-xl
+                p-6
+                border
+                border-primary/20
+                hover:border-primary/50
+                transition
+              "
             >
-              <div className="flex items-center gap-4 mb-3">
-                <span className="text-3xl text-secondary group-hover:text-primary transition-colors">
-                  {skill.icon}
-                </span>
-                <span className="text-lg font-bold">{skill.name}</span>
-              </div>
-              <div className="w-full h-2 bg-muted/30 rounded-full overflow-hidden">
-                <motion.div
-                  initial={{ width: 0 }}
-                  animate={isInView ? { width: `${skill.level}%` } : {}}
-                  transition={{ duration: 1, delay: 0.2 + i * 0.1 }}
-                  className="h-full bg-gradient-to-r from-primary to-secondary rounded-full"
-                />
+              <h3
+                className="
+                  text-xl
+                  font-bold
+                  text-secondary
+                  mb-6
+                "
+              >
+                {group.category}
+              </h3>
+
+              <div className="grid grid-cols-2 gap-5">
+                {group.items.map((skill) => (
+                  <div
+                    key={skill.name}
+                    className="
+                      flex
+                      items-center
+                      gap-3
+                      text-muted
+                      hover:text-primary
+                      transition
+                    "
+                  >
+                    <span className="text-2xl">{skill.icon}</span>
+
+                    <span>{skill.name}</span>
+                  </div>
+                ))}
               </div>
             </motion.div>
           ))}

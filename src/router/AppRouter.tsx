@@ -3,7 +3,7 @@ import { HomePage } from "../pages/HomePage";
 
 export const AppRouter = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/portfolio-website">
       <Routes>
         <Route path="/" element={<HomePage />} />
       </Routes>

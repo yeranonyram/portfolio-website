@@ -109,25 +109,25 @@ export const Hero = () => {
 
 
               <a
-                href="/Portfolio-website/Yerko_Flores_Mamani_Developer_CV"
-                download
-                className="
-                px-8 py-3
-                border border-secondary
-                text-secondary
-                font-bold
-                rounded-full
-                hover:bg-secondary/10
-                transition-all
-                hover:scale-105
-                flex
-                items-center
-                justify-center
-                gap-2
-                "
-              >
-                <FaFileDownload />
-                Descargar CV
+                href="/portfolio-website/Yerko_Flores_Mamani_Developer_CV.pdf"               
+                  download
+                  className="
+                  px-8 py-3
+                  border border-secondary
+                  text-secondary
+                  font-bold
+                  rounded-full
+                  hover:bg-secondary/10
+                  transition-all
+                  hover:scale-105
+                  flex
+                  items-center
+                  justify-center
+                  gap-2
+                  "
+                >
+                  <FaFileDownload />
+                  Descargar CV
               </a>
 
 
